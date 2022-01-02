@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'ngWebExample';
+  public firstNameFormControl: FormControl;
+  public lastNameFormControl: FormControl;
+
+  constructor() {
+    this.firstNameFormControl = new FormControl();
+    this.lastNameFormControl = new FormControl();
+  }
 }
