@@ -1,7 +1,7 @@
 
 <h2>Reactive Form Control Example: </h2>
 <br />
-<div form>
+<form>
   <input type="text" 
     placeholder="first name"
     [formControl]="firstNameFormControl">
@@ -10,10 +10,19 @@
   <input type="text"
     placeholder="last name"
     [formControl]="lastNameFormControl">
-</div>
+</form>
+
 <br />
 <br />
 <br />
 <i>Testing the result:: </i>
-<p> firstName: <br /><b>{{firstNameFormControl.value}}</b></p>
-<p> lastName: <br /><b>{{lastNameFormControl.value}}</b></p>
+<table>
+  <tr>
+    <td> First Name </td>
+    <td> Last Name </td>
+  </tr>
+  <tr>
+    <td> <b>{{firstNameFormControl.value}} </b></td>
+    <td> <b>{{lastNameFormControl.value}} </b> </td>
+  </tr>
+</table>
